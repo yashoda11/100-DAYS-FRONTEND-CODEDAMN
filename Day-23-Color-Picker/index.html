@@ -1,50 +1,17 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Color Picker Example</title>
-  <style>
-    #colorDisplay {
-      padding: 20px;
-      text-align: center;
-    }
+<html>
+	<head>
+		<title>Color picker lab</title>
+	</head>
+	<body>
+		<input type="color" id="colorPicker">
 
-    #colorCode {
-      margin-top: 10px;
-      font-size: 16px;
-      color: #333;
-    }
-  </style>
-</head>
-<body>
+		<div id="colorDisplay">
+		  <p id="colorCode">Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus dolorem fugiat, fuga repellendus dolor quis temporibus quod voluptas eum voluptatibus velit nostrum quas fugit a accusamus ducimus, ratione corporis id!</p>
+		</div>
+	  
+		<!-- Create a p tag with id 'colorCode' inside the div element -->
 
-  <!-- Color Picker Input -->
-  <input type="color" id="colorPicker">
-
-  <!-- Color Display Area -->
-  <div id="colorDisplay">
-    <p id="colorCode">Color Code: </p>
-  </div>
-
-  <script>
-    // Get references to the elements
-    const colorPicker = document.getElementById('colorPicker');
-    const colorDisplay = document.getElementById('colorDisplay');
-    const colorCode = document.getElementById('colorCode');
-
-    // Add event listener to the colorPicker input
-    colorPicker.addEventListener('input', function() {
-      // Get the selected color from the colorPicker
-      const selectedColor = colorPicker.value;
-
-      // Set the background color of colorDisplay
-      colorDisplay.style.backgroundColor = selectedColor;
-
-      // Show the color code in the colorCode paragraph
-      colorCode.textContent = `Color Code: ${selectedColor}`;
-    });
-  </script>
-
-</body>
+		<script src="script.js"></script>
+	</body>
 </html>
