@@ -1,0 +1,14 @@
+    #container {
+      column-count:2;
+      column-gap: 20px; /* Optional: Set the gap between columns */
+    }
+
+    .box {
+      margin-bottom: 20px;
+      padding: 10px;
+      background-color: #e0e0e0;
+    }
+
+    .box:nth-child(3) {
+      column-span: all;
+    }
