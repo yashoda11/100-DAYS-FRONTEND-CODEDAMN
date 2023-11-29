@@ -23,3 +23,4 @@ console.log(secondCounter());
 const thirdCounter = createCounter(42);
 console.log(thirdCounter()); // 42
 console.log(thirdCounter()); // 43
+console.log(thirdCounter()); // 44
