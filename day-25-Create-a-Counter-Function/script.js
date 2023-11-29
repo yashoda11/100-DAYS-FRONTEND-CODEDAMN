@@ -7,7 +7,9 @@ function createCounter(n) {
 	}
 }
 
+
 // Sample Test Cases :
+
 
 const counter = createCounter(10);
 console.log(counter()); // 10
