@@ -21,5 +21,5 @@ function displayTitles(posts){
         listItems.style.padding = "10px";
         listItems.style.fontSize = "25px";
         postTitles.appendChild(listItems);
-    })
+    });
 }
