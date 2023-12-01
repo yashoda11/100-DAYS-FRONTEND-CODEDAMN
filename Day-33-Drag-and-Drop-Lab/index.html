@@ -33,21 +33,11 @@
 
     <script>
         document.addEventListener('DOMContentLoaded', function () {
-            const dragItem = document.getElementById('dragItem');
             const dropZone = document.getElementById('dropZone');
-
-            // Drag Start Event
-            dragItem.addEventListener('dragstart', function (e) {
-                e.dataTransfer.setData('text/plain', ''); // Required for Firefox
-            });
 
             // Drag Over Event
             dropZone.addEventListener('dragover', function (e) {
                 e.preventDefault(); // Allow dropping
-            });
-
-            // Drag Enter Event
-            dropZone.addEventListener('dragenter', function () {
                 dropZone.style.backgroundColor = '#ecf0f1'; // Set background color when dragging over
             });
 
@@ -57,14 +47,8 @@
             });
 
             // Drop Event
-            dropZone.addEventListener('drop', function (e) {
-                e.preventDefault();
+            dropZone.addEventListener('drop', function () {
                 dropZone.style.backgroundColor = '#2ecc71'; // Set background color on drop
-            });
-
-            // Drag End Event (to reset color even if not dropped)
-            dragItem.addEventListener('dragend', function () {
-                dropZone.style.backgroundColor = ''; // Reset background color on drag end
             });
         });
     </script>
