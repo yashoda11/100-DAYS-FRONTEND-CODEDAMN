@@ -1,0 +1,18 @@
+#dragItem {
+    width: 100px;
+    height: 100px;
+    background-color: lightblue;
+    border: 1px solid #000;
+    margin: 10px;
+    display: inline-block;
+    cursor: move;
+}
+
+#dropZone {
+    width: 200px;
+    height: 200px;
+    border: 2px dashed #000;
+    margin: 10px;
+    display: inline-block;
+    background-color: lightgrey;
+}

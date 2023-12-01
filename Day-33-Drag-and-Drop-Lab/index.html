@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        #dropZone {
+            width: 300px;
+            height: 300px;
+            border: 2px dashed #aaa;
+            margin-top: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: background-color 0.3s ease;
+        }
+
+        #dragItem {
+            width: 50px;
+            height: 50px;
+            background-color: #3498db;
+            color: #fff;
+            text-align: center;
+            line-height: 50px;
+            cursor: move;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="dragItem" draggable="true">Drag me!</div>
+    <div id="dropZone">Drop here!</div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const dragItem = document.getElementById('dragItem');
+            const dropZone = document.getElementById('dropZone');
+
+            // Drag Start Event
+            dragItem.addEventListener('dragstart', function (e) {
+                e.dataTransfer.setData('text/plain', ''); // Required for Firefox
+            });
+
+            // Drag Over Event
+            dropZone.addEventListener('dragover', function (e) {
+                e.preventDefault(); // Allow dropping
+            });
+
+            // Drag Enter Event
+            dropZone.addEventListener('dragenter', function () {
+                dropZone.style.backgroundColor = '#ecf0f1'; // Set background color when dragging over
+            });
+
+            // Drag Leave Event
+            dropZone.addEventListener('dragleave', function () {
+                dropZone.style.backgroundColor = ''; // Reset background color when leaving
+            });
+
+            // Drop Event
+            dropZone.addEventListener('drop', function (e) {
+                e.preventDefault();
+                dropZone.style.backgroundColor = '#2ecc71'; // Set background color on drop
+            });
+
+            // Drag End Event (to reset color even if not dropped)
+            dragItem.addEventListener('dragend', function () {
+                dropZone.style.backgroundColor = ''; // Reset background color on drag end
+            });
+        });
+    </script>
+
+</body>
+</html>
